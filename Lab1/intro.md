@@ -20,3 +20,7 @@ The second excercise consists in creating a sngle bit full adder. To do that you
 SUM = A ⊕ B ⊕ Cin and C_out = (A ⋅ B) + (C_in ⋅ (A ⊕ B)) 
 
 ![alt text](Full-adder_logic_diagram.svg.png)
+
+You can find a clocked and a fully sequential implementation of the full_adder in the respective folders.
+
+

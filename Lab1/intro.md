@@ -21,7 +21,7 @@ SUM = A ⊕ B ⊕ Cin and C_out = (A ⋅ B) + (C_in ⋅ (A ⊕ B))
 
 ![alt text](Full-adder_logic_diagram.svg.png)
 
-You can find a clocked and a fully sequential implementation of the full_adder in the respective folders.
+You can find a clocked and a fully sequential implementation of the full_adder in the respective folders of this repository.
 
 In the third excercise we are going to create a 2bit counter. The idea is to generate an output that increases every time a rising edge of the clock is received. When a reset is asserted, the counter output will be 0.
 
@@ -38,4 +38,7 @@ To do that:
 - end the ifs and the process
 - before ending the architecture, add the cucnurrent statement `count<=std_logic_vector(u_count)`. In this way, the value of `u_count` is converted in a std_logic_vector and assigned to `count`
 
+The test bench of this design is quite easy. Using the flipflop tb try to elaborate the tb for this design. The rst must be asserted to 1 for the first 20ns and then set to 0 to allow the design to work.
+
+YTo help you in the debugging, there is my version on the excercise in the 2bit_counter folder of this repository.
 

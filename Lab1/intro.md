@@ -15,5 +15,8 @@ The first excercise you can do is to build a clocked version of the half_adder d
 
 To help you in the debugging, there is my version on the excercise in the clocked_half_adder folder
 
-The second excercise consists in creating a sngle bit full adder. To do that you can simply add the carry_in port to the half_adder design and compute the new logic: SUM = A ⊕ B ⊕ Cin and C_out = (A ⋅ B) + (C_in ⋅ (A ⊕ B)) 
+The second excercise consists in creating a sngle bit full adder. To do that you can simply add the carry_in port to the half_adder design and compute the new logic: 
 
+SUM = A ⊕ B ⊕ Cin and C_out = (A ⋅ B) + (C_in ⋅ (A ⊕ B)) 
+
+![alt text](hhttps://en.wikipedia.org/wiki/File:Full-adder_logic_diagram.svg)

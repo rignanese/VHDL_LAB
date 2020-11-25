@@ -1,0 +1,7 @@
+v 4
+file . "source.vhdl" "536ce0095ce00da9261db36227b9feaeed134ac0" "20201125113734.668":
+  entity full_adder at 1( 0) + 0 on 21;
+  architecture arch of full_adder at 10( 174) + 0 on 22;
+file . "test_bench.vhdl" "5ecb9ea5d5517ab83d9f41a46fd90b901e9a352f" "20201125113737.370":
+  entity clocked_full_adder_tb at 3( 32) + 0 on 23;
+  architecture tb of clocked_full_adder_tb at 10( 144) + 0 on 24;

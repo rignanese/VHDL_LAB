@@ -30,8 +30,12 @@ To do that:
 - create a file named "counter_2bit.vhdl" and define the entity with two 1bit input (clk and rst) and a single 2bit output (count)
 - for this example we are going to use the `ieee.numeric_std.all` package so use it together with the `ieee.std_logic_1164.all`
 - in the architecture, declare a 2bit signal of `unsigned` type (u_count) and initialize at 0 (remember that this is a 2 bit signal so you must use the quotation marks `signal u_count: unsigned (1 downto 0):="00"`
-- the architecture is composed by two concurrent processes. The first one is in charge of incresing the unsigned internal signal (and control the overflow of it), while the second one is in charge of putting the value of this internal signal into the count port (this second process is just a cuncurrent statement)
+- the architecture is composed by two concurrent processes. The first one is in charge of incresing u_count (and control the overflow of it), while the second one is in charge of putting the value of `u_count` into the `count` port (this second process is just a cuncurrent statement)
 - create a sequential process with clk and rst in the sensitivity list
 - first of all define the behaviour of the device when the rst is 1 `if rst = '1' then` your `unsigned` signal musto go to 0
-- now if rst is 0 and a rising edge of the clock is recognized, the 
+- now if rst is 0 and a rising edge of the clock is recognized, `u_count` is increased by 1
+- add the overflow control `if u_count="11" then u_count="00"
+- end the ifs and the process
+- before ending the architecture, add the cucnurrent statement `count<=std_logic_vector(u_count)`. In this way, the value of `u_count` is converted in a std_logic_vector and assigned to `count`
+
 

@@ -23,11 +23,15 @@ SUM = A ⊕ B ⊕ Cin and C_out = (A ⋅ B) + (C_in ⋅ (A ⊕ B))
 
 You can find a clocked and a fully sequential implementation of the full_adder in the respective folders.
 
-In the third excercise we are going to create a 2bit counter. The idea is to generate an output that increases every time a rising edge of the clock is received.
+In the third excercise we are going to create a 2bit counter. The idea is to generate an output that increases every time a rising edge of the clock is received. When a reset is asserted, the counter output will be 0.
 
 To do that:
 - create a new folder in which this new design will be implemented
 - create a file named "counter_2bit.vhdl" and define the entity with two 1bit input (clk and rst) and a single 2bit output (count)
 - for this example we are going to use the `ieee.numeric_std.all` package so use it together with the `ieee.std_logic_1164.all`
-- in the architecture, declare a 2bit signal of `unsigned` type and initialize at 0 (remember that this is a 2 bit signal so you must use the quotation marks `:="00"`
+- in the architecture, declare a 2bit signal of `unsigned` type (u_count) and initialize at 0 (remember that this is a 2 bit signal so you must use the quotation marks `signal u_count: unsigned (1 downto 0):="00"`
+- the architecture is composed by two concurrent processes. The first one is in charge of incresing the unsigned internal signal (and control the overflow of it), while the second one is in charge of putting the value of this internal signal into the count port (this second process is just a cuncurrent statement)
+- create a sequential process with clk and rst in the sensitivity list
+- first of all define the behaviour of the device when the rst is 1 `if rst = '1' then` your `unsigned` signal musto go to 0
+- now if rst is 0 and a rising edge of the clock is recognized, the 
 

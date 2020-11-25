@@ -1,0 +1,7 @@
+v 4
+file . "test_bench.vhdl" "a313f2718a5f3dd9ab6b409895385f026f9d10fd" "20201125103640.549":
+  entity clocked_half_adder_tb at 3( 32) + 0 on 13;
+  architecture tb of clocked_half_adder_tb at 10( 144) + 0 on 14;
+file . "source.vhdl" "837a4e2c6252505846e94a7c9635cea1efcf1526" "20201125103634.742":
+  entity half_adder at 1( 0) + 0 on 11;
+  architecture arch of half_adder at 10( 168) + 0 on 12;

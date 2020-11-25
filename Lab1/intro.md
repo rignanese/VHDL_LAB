@@ -40,5 +40,5 @@ To do that:
 
 The test bench of this design is quite easy. Using the flipflop tb try to elaborate the tb for this design. The rst must be asserted to 1 for the first 20ns and then set to 0 to allow the design to work.
 
-YTo help you in the debugging, there is my version on the excercise in the 2bit_counter folder of this repository.
+To help you in the debugging, there is my version on the excercise in the 2bit_counter folder of this repository.
 

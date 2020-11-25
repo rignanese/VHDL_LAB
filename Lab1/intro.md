@@ -13,3 +13,6 @@ The first excercise you can do is to build a clocked version of the half_adder d
 - run the simulation (`ghdl -r "entity_name_of_test_bench_file" --vcd=waves.vcd --disp-time --stop-time=100ns`)
 - run `gtkwave waves.vcd` and visualize the waveforms.
 
+To help you in the debugging, there is my version on the excercise in the clocked_half_adder folder
+
+

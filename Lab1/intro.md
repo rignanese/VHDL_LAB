@@ -42,7 +42,10 @@ The test bench of this design is quite easy. Using the flipflop tb try to elabor
 
 To help you in the debugging, there is my version on the excercise in the 2bit_counter folder of this repository.
 
-The forth excercise is to build a 2bit ripple-carry adder (https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder). We can use the structural approach and connect 2 single bit full-adders accordingly with this figure:
+The forth excercise is to build a 4bit ripple-carry adder (https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder). We can use the structural approach and connect 4 single bit full-adders accordingly with this figure:
 
 ![alt text](ripple-carry-adder-4-bit.png )
+
+Our design will handle 4 signal vectors: A, B, S 4bit and C 5bit. The output can be written as C(4)&S, the concatenation of the last element of the Carry vector and the entire Sum vecrtor.
+First of all, create a new folder in which you can already put the source of your single bit full-adder.
 

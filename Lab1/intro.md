@@ -47,5 +47,9 @@ The forth excercise is to build a 4bit ripple-carry adder (https://en.wikipedia.
 ![alt text](ripple-carry-adder-4-bit.png )
 
 Our design will handle 4 signal vectors: A, B, S 4bit and C 5bit. The output can be written as C(4)&S, the concatenation of the last element of the Carry vector and the entire Sum vecrtor.
-First of all, create a new folder in which you can already put the source of your single bit full-adder.
+
+Implementation:
+- First of all, create a new folder in which you put the source of your single bit full-adder.
+- Create a new VHDL design file and start declaring the entity with 4 ports like in figure
+![alt text](Ripple-adder.png )
 

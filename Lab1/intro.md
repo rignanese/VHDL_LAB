@@ -59,10 +59,10 @@ Implementation:
 - follow this template
 
 ```
-a => a(0),
-b => b(0),
-c_in => c(0),
-sum => sum(0),
-carry => c(1)
+YOUR DSIGN IN1 => A(0),
+YOUR DSIGN IN2 => A(0),
+YOUR DSIGN CarryIN => C(0),
+YOUR DSIGN OUTPUT => S(0),
+YOUR DSIGN CarryOUT => C(1)
 ```
 

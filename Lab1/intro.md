@@ -51,6 +51,6 @@ Our design will handle 4 signal vectors: A, B, S 4bit and C 5bit. The output can
 Implementation:
 - First of all, create a new folder in which you put the source of your single bit full-adder.
 - Create a new VHDL design file and start declaring the entity with 4 ports like in figure
-![alt text](Ripple-adder.png )
+![alt text](Ripple_adder.png )
 
 

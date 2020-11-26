@@ -53,4 +53,16 @@ Implementation:
 - Create a new VHDL design file and start declaring the entity with 4 ports like in figure
 ![alt text](Ripple_adder.png )
 
+- The design needs two internal signals one of which for the carry `C(4..0)` and another one for the internal for the sum `S(3..0)` (refer to the first picture)
+- Start the architecture and declare this two signals;
+- map the ports of 4 single bit full_adder by using `entity work."YOUR FULL ADDER DESIGN" port map`
+- follow this template
+
+```
+a => a(0),
+b => b(0),
+c_in => c(0),
+sum => sum(0),
+carry => c(1)
+```
 

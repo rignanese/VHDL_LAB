@@ -1,4 +1,3 @@
-This is the first part of the laboratory.
 
 In this folder you will find the first two examples DFF and half_adder we saw in the previous introductory class.
 

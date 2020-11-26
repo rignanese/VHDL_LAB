@@ -53,3 +53,4 @@ Implementation:
 - Create a new VHDL design file and start declaring the entity with 4 ports like in figure
 ![alt text](Ripple-adder.png )
 
+

@@ -44,5 +44,5 @@ To help you in the debugging, there is my version on the excercise in the 2bit_c
 
 The forth excercise is to build a 2bit ripple-carry adder (https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder). We can use the structural approach and connect 2 single bit full-adders accordingly with this figure:
 
-![alt text](Full-adder_logic_diagram.svg.png)
+![alt text](ripple-carry-adder-4-bit.png )
 

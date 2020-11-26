@@ -65,4 +65,8 @@ YOUR DSIGN CarryIN => C(0),
 YOUR DSIGN OUTPUT => S(0),
 YOUR DSIGN CarryOUT => C(1)
 ```
+- Assign to the port SUM the value of the concatenation C(4)&S and end the architecture.
+- Save and analize
+
+There are two TBs in the folder ripple_adder. They follows two totally different approaches in the generation of the stimuli. One is forcefully more hardware oriented while the onother one uses a much synthetic and clever procedural approach. The 2 codes are commented.
 

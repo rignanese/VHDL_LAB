@@ -79,11 +79,14 @@ You can use the same test benches as in the previous example.
 
 In thi example we will create a n bit ripple-carry full adder.
 
-To do that, add a `generic` declaration inside the entity. Generics are a means of passing specific information into an entity. They do not have a mode (direction):
+## Implementation
+
+- Add a `generic` declaration inside the entity. Generics are a means of passing specific information into an entity. They do not have a mode (direction)
+- Follow the template:
 ```
 entity ripple_carry_adder is
   generic (
-    WIDTH : natural := 10
+    WIDTH : natural := n
     );
   port (
     in_A  : in std_logic_vector(WIDTH downto 0);
@@ -92,6 +95,7 @@ entity ripple_carry_adder is
     );
 end ripple_carry_adder;
 ```
+-
 
 
 

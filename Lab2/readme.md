@@ -77,7 +77,7 @@ You can use the same test benches as in the previous example.
 
 # nbit Ripple-carry Full Adder
 
-In thi example we will create a n bit ripple-carry full adder.
+In this example we will create a n bit ripple-carry full adder.
 
 ## Implementation
 

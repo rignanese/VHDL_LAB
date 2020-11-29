@@ -66,8 +66,8 @@ P(0)<=a(0) or b(0);
 ```
 - To evaluate the carry out you need to solve these equations C(i+1)=Gi+(Pi*Ci)
 ```
-c(0)<=c_in;
-c(1)<=G(0) or (P(0) and c(0));
+C(0)<=c_in;
+C(1)<=G(0) or (P(0) and c(0));
 ...
 ```
 - Assign to the port SUM the value of the concatenation C(4)&S and end the architecture.

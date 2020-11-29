@@ -111,6 +111,10 @@ end ripple_carry_adder;
 ```
 - Remeber that `SET_WIDTH` and `i_FULL_ADDER_INST` are only labels!
 - Assign to the output port `result` the concatenation of `C(WIDTH)` and the `SUM` vector 
+- Save and analyze
+
+For the test bench, we can use, as a template, the procedural version of the previous examples and modify the code by adding a constant `WIDTH = n`.
+
 
 
 

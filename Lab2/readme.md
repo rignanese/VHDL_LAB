@@ -33,6 +33,8 @@ There are two TBs in the folder ripple_adder. They follows two totally different
 
 # 4bit carry-lookahead adder 
 
-(https://en.wikipedia.org/wiki/Carry-lookahead_adder)
+[Wikipedia carry-lokahead adder](https://en.wikipedia.org/wiki/Carry-lookahead_adder)
+
+
 
 

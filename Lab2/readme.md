@@ -35,6 +35,10 @@ There are two TBs in the folder ripple_adder. They follows two totally different
 
 [Wikipedia carry-lokahead adder](https://en.wikipedia.org/wiki/Carry-lookahead_adder)
 
+This adder use a different logic to infer the value of the carry bits.
+
+![alt text](carry-lookahead-adder-4-bit.png )
+
 
 
 

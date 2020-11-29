@@ -73,7 +73,25 @@ C(1)<=G(0) or (P(0) and c(0));
 - Assign to the port SUM the value of the concatenation C(4)&S and end the architecture.
 - Save and analyze
 
+You can use the same test benches as in the previous example.
+
 # nbit Ripple-carry Full Adder
+
+In thi example we will create a n bit ripple-carry full adder.
+
+To do that, add a `generic` declaration inside the entity. Generics are a means of passing specific information into an entity. They do not have a mode (direction):
+```
+entity ripple_carry_adder is
+  generic (
+    WIDTH : natural := 10
+    );
+  port (
+    in_A  : in std_logic_vector(WIDTH downto 0);
+    in_B  : in std_logic_vector(WIDTH downto 0);
+    result   : out std_logic_vector(WIDTH+1 downto 0)
+    );
+end ripple_carry_adder;
+```
 
 
 

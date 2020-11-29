@@ -73,5 +73,9 @@ C(1)<=G(0) or (P(0) and c(0));
 - Assign to the port SUM the value of the concatenation C(4)&S and end the architecture.
 - Save and analyze
 
+# nbit Ripple-carry Full Adder
+
+
+
 
 

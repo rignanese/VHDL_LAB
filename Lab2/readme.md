@@ -19,11 +19,11 @@ Our design will handle 4 signal vectors: A, B, S 4bit and C 5bit. The output can
 - follow this template
 
 ```
-YOUR DSIGN IN1 => A(0),
-YOUR DSIGN IN2 => B(0),
-YOUR DSIGN CarryIN => C(0),
-YOUR DSIGN OUTPUT => S(0),
-YOUR DSIGN CarryOUT => C(1)
+YOUR DESIGN IN1 => A(0),
+YOUR DESIGN IN2 => B(0),
+YOUR DESIGN CarryIN => C(0),
+YOUR DESIGN OUTPUT => S(0),
+YOUR DESIGN CarryOUT => C(1)
 ```
 - Assign to the port SUM the value of the concatenation C(4)&S and end the architecture.
 - Save and analyze
@@ -50,11 +50,11 @@ Carry-lookahead logic uses the concepts of generating (G) and propagating (P) ca
 - follow this template
 
 ```
-YOUR DSIGN IN1 => A(0),
-YOUR DSIGN IN2 => B(0),
-YOUR DSIGN CarryIN => C(0),
-YOUR DSIGN OUTPUT => S(0),
-YOUR DSIGN CarryOUT => open
+YOUR DESIGN IN1 => A(0),
+YOUR DESIGN IN2 => B(0),
+YOUR DESIGN CarryIN => C(0),
+YOUR DESIGN OUTPUT => S(0),
+YOUR DESIGN CarryOUT => open
 ```
 - Create the Generate vector following the formula Gi=Ai*B1
 ```
@@ -95,7 +95,20 @@ entity ripple_carry_adder is
     );
 end ripple_carry_adder;
 ```
--
+- Start the architecture by declarating the 2 signals needed for the sum and the carry `SUM(WIDTH..0)` and `C(WIDTH..0)`
+- Use a `for-generate` command to map the ports of `WIDTH` 1bit_Full_Adders like in the following code:
+```
+  SET_WIDTH : for ii in 0 to WIDTH generate
+      i_FULL_ADDER_INST : entity work."YOUR FULL ADDER DESIGN" port map
+        port map (
+          YOUR DESIGN IN1 => in_A(ii),
+          YOUR DESIGN IN2 => in_B(ii),
+          YOUR DESIGN CarryIN => C(ii),
+          YOUR DESIGN OUTPUT => SUM(ii),
+          YOUR DESIGN CarryOUT => C(ii+1)
+        );
+  end generate SET_WIDTH;
+```
 
 
 

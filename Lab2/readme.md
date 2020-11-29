@@ -1,6 +1,6 @@
-#4bit ripple-carry adder
+# 4bit ripple-carry adder
 
-(https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder).
+[Wikipedia ripple-carry adder](https://en.wikipedia.org/wiki/Adder_(electronics)#Ripple-carry_adder).
 
 We can use the structural approach and connect 4 single bit full-adders accordingly with this figure:
 
@@ -31,7 +31,7 @@ YOUR DSIGN CarryOUT => C(1)
 There are two TBs in the folder ripple_adder. They follows two totally different approaches in the generation of the stimuli. One is forcefully more hardware oriented while the other one uses a much synthetic and clever procedural approach. The 2 codes are commented.
 
 
-#4bit carry-lookahead adder 
+# 4bit carry-lookahead adder 
 
 (https://en.wikipedia.org/wiki/Carry-lookahead_adder)
 

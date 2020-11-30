@@ -95,7 +95,7 @@ entity ripple_carry_adder is
     );
 end ripple_carry_adder;
 ```
-- Start the architecture by declaring the 2 signals needed for the sum and the carry `SUM(WIDTH..0)` and `C(WIDTH+..0)`
+- Start the architecture by declaring the 2 signals needed for the sum and the carry `SUM(WIDTH..0)` and `C(WIDTH+1..0)`
 - Use a `for-generate` command to map the ports of `WIDTH` 1bit_Full_Adders like in the following code:
 ```
   SET_WIDTH : for ii in 0 to WIDTH generate
@@ -110,7 +110,7 @@ end ripple_carry_adder;
   end generate SET_WIDTH;
 ```
 - Remeber that `SET_WIDTH` and `i_FULL_ADDER_INST` are only labels!
-- Assign to the output port `result` the concatenation of `C(WIDTH+)` and the `SUM` vector 
+- Assign to the output port `result` the concatenation of `C(WIDTH+1)` and the `SUM` vector 
 - Save and analyze
 
 For the test bench, we can use, as a template, the procedural version of the previous examples and modify the code by adding a constant `WIDTH = n`.

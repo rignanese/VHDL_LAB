@@ -42,7 +42,7 @@ This adder use a different logic to infer the value of the carry bits.
 Carry-lookahead logic uses the concepts of generating (G) and propagating (P) carries.
 
 ## Implementation:
-- As for the precious example, create a new folder in which you put the source of your single bit full-adder.
+- As for the previous example, create a new folder in which you put the source of your single bit full-adder.
 - Create a new VHDL design file starting from the ripple-carry adder. Only change its entity name because they share the same ports (and functionality)
 - The design needs two internal signals on top of the previous design, the Generate `G(3..0)` and the Propagate `P(3..0)` vectors
 - Copy the previous architecture and declare this two additional signals;
@@ -95,7 +95,7 @@ entity ripple_carry_adder is
     );
 end ripple_carry_adder;
 ```
-- Start the architecture by declarating the 2 signals needed for the sum and the carry `SUM(WIDTH..0)` and `C(WIDTH..0)`
+- Start the architecture by declaring the 2 signals needed for the sum and the carry `SUM(WIDTH..0)` and `C(WIDTH..0)`
 - Use a `for-generate` command to map the ports of `WIDTH` 1bit_Full_Adders like in the following code:
 ```
   SET_WIDTH : for ii in 0 to WIDTH generate

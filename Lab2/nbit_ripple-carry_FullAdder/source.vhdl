@@ -36,6 +36,6 @@ begin
         );
   end generate SET_WIDTH;
  
-  result <= C(WIDTH) & SUM;  -- VHDL Concatenation
+  result <= C(WIDTH+1) & SUM;  -- VHDL Concatenation
    
 end rtl;

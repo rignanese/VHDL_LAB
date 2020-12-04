@@ -90,4 +90,28 @@ variable v_Count : natural range 0 to 6 := 0;
   ...
 ```
 - Increase both counters at each clock cycle
-- 
+- In the same process, implement two comparators one for each counters and describe the behaviour of the 2 outputs
+```
+	-- Signal Checking
+
+			if r_Count = 6 then
+				o_Sig_Done <= '1';
+				r_Count    <= 0;
+			else
+				o_Sig_Done <= '0';
+			end if;
+
+				-- Variable Checking
+			
+			if v_Count = 6 then
+				o_Var_Done <= '1';
+				v_Count := 0;
+			else
+				o_Var_Done <= '0';
+			end if;
+```
+- End the process and the architecture.
+
+The test bench is really simple. You just need to connect a clk source as a stimulus of this design.
+
+

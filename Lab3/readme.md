@@ -122,3 +122,39 @@ By following this picture we can describe the behaviour of the machine
 
 ![alt text](FSM.png )
 
+## Implementation
+
+- Start a new VHDL file in a new folder and declare the entity for the finite state machine, add reset.
+- In the architecture declare a new type made by the 4 states in the picture
+- Declare two signals of this new type indicating the current and next states of the transition
+- We will need 3 processes for this design
+- start the first process sensitive to the clk and the reset. This is in charge of the transitions between current state and next state (when to go)
+- When the reset is issued the machine has to be in S0 so the current state must be associated to S0
+- In the other cases, when a rising edge of the clock is detected, at the current state mus be associated the next state
+- end this first process
+-start a combinatory process sensitive to the current state and the input port. This is in charge of describing the transitions (where to go)
+- start a case-when statement describing the behaviour of each state when a 1 or a 0 is detected in the input port like:
+```
+case current_state is
+			when S0=>
+			if in_port = '1' then
+			next_state <= S1;
+			else
+			next_state <= S0;
+			end if;
+```
+-End this process
+- Start a new process sensitive to only the current state. This is in charge of the output
+- Begin a case-when structure and describe the behaviour of the out port when the machine is in each of the four S states.
+
+You will find a TB in the pattern_recog folder. If you use these names, you can try it in your design:
+
+- source file entity: FSM
+- FSM ports:
+	-clk : in
+	-in_port : in
+	-reset : in 
+	-out_port:out
+The generated pattern is 
+(Reset/in_port)= 1/0 , '0/1' , '0/0', '0/1', '0/1', '0/0', '0/1', '0/1', '0/1', '0/0', '0/1', '0/1', '0/1', '0/1',
+

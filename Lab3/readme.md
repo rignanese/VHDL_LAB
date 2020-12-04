@@ -118,9 +118,10 @@ The test bench is really simple. You just need to connect a clk source as a stim
 
 In this last example we will implement the MOORE finite state machine that was described during a previous lesson. This state machine will recognize when a sequence of 3 consecutive 1 is detected.
 
-By following this picture we can describe the behavior of the machine
+By following the pictures we can describe the behavior of the machine
 
 ![alt text](FSM.png )
+![alt text](FSM_table.png )
 
 ## Implementation
 

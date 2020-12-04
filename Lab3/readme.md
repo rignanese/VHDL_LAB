@@ -153,10 +153,10 @@ You will find a TB in the pattern_recog folder. If you use these names, you can 
 
 - source file entity: FSM
 - FSM ports:
--clk : in
--in_port : in
--reset : in 
--out_port:out
+	- clk : in
+	- in_port : in
+	- reset : in 
+	- out_port:out
 The generated pattern is 
 (Reset/in_port)= 1/0 , '0/1' , '0/0', '0/1', '0/1', '0/0', '0/1', '0/1', '0/1', '0/0', '0/1', '0/1', '0/1', '0/1',
 

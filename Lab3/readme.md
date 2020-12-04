@@ -114,4 +114,10 @@ variable v_Count : natural range 0 to 6 := 0;
 
 The test bench is really simple. You just need to connect a clk source as a stimulus of this design.
 
+# Finite state machine
+
+In this last example we will implement the MOORE finite state machied that was described during a previous lesson. This state machine will recognize when a sequence of 3 consecutive 1 is detected.
+
+By following this picture we can describe the behaviour of the machine
+
 

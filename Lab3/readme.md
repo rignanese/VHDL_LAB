@@ -120,4 +120,5 @@ In this last example we will implement the MOORE finite state machied that was d
 
 By following this picture we can describe the behaviour of the machine
 
+![alt text](FSM.png )
 

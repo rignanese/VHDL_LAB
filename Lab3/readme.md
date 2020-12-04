@@ -77,4 +77,17 @@ To show this last point, we are going to implement a simple counter process wher
 ## Implementation
 
 - Create a new folder and tart a new VHDL file by declaring the entity with one input (clk) and the two "counters done" ountput (var_done and sign_done)
--
+- Start the architecture and decare the count signal we want to evaluate. You can declare it as natural (we wont be using it as an output) with a limited size
+```
+signal r_Count    : natural range 0 to 6 := 0;
+```
+- Start the process and declare a variable of the same type and size of the signal
+```
+...
+process (i_clk)
+variable v_Count : natural range 0 to 6 := 0;
+ begin
+  ...
+```
+- Increase both counters at each clock cycle
+- 

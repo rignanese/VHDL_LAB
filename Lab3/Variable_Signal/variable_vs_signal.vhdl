@@ -14,9 +14,9 @@ end variable_vs_signal;
  
 architecture rtl of variable_vs_signal is
  
-  signal r_Var_Done : std_logic            := '0';
+
   signal r_Count    : natural range 0 to 6 := 0;
-  signal r_Sig_Done : std_logic            := '0';
+
  
    
 begin
@@ -32,24 +32,23 @@ begin
 				-- Signal Checking
 
 			if r_Count = 6 then
-				r_Sig_Done <= '1';
+				o_Sig_Done <= '1';
 				r_Count    <= 0;
 			else
-				r_Sig_Done <= '0';
+				o_Sig_Done <= '0';
 			end if;
 
 				-- Variable Checking
 			
 			if v_Count = 6 then
-				r_Var_Done <= '1';
+				o_Var_Done <= '1';
 				v_Count := 0;
 			else
-				r_Var_Done <= '0';
+				o_Var_Done <= '0';
 			end if;
  
 		end process VAR_VS_SIG;
 	
- 	o_var_done <= r_Var_Done;
-	o_sig_done <= r_Sig_Done;
+
    
 end rtl;

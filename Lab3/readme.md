@@ -26,6 +26,7 @@ In this excercise we will create a 7-segment display driver that allows a 4bit b
         ...
         when others => r_Hex_Encoding <= (others => 'X');
 ```
+- Note that the keyword `others` may be used to refer to all elements not already mentioned
 - Now we can end the case, the if (clk) and the process
 - As concurrent statemennt now, we have to assign the 7 outputs to each element of the r_Hex_Encoding vector
 ```
@@ -67,3 +68,13 @@ end if;..
 
 You will find a simple TB example in the RAM8x32 folder.
 
+# Variable vs Signal
+
+In this example we will see the different behaviour of variables and signals assigments. As presented during the classes, a variable in not always synthetized and could not have a physical counterpart. Another big difference is that a variable is immediately assigned in a sequential syncronous process while for a signal, the assigment will take 1 clk cycle.
+
+To show this last point, we are going to implement a simple counter process where the value of both a variable and a signal is incremented by one. Once each counters reach a certain number, the design will output that the count is done (2 outputs, one for the signal and the other one for the variable).
+
+## Implementation
+
+- Create a new folder and tart a new VHDL file by declaring the entity with one input (clk) and the two "counters done" ountput (var_done and sign_done)
+-

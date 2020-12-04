@@ -26,7 +26,7 @@ In this excercise we will create a 7-segment display driver that allows a 4bit b
         ...
         when others => r_Hex_Encoding <= (others => 'X');
 ```
-- now we can end the case, the if (clk) and the process
+- Now we can end the case, the if (clk) and the process
 - As concurrent statemennt now, we have to assign the 7 outputs to each element of the r_Hex_Encoding vector
 ```
 o_Segment_A <= r_Hex_Encoding(6);
@@ -34,7 +34,36 @@ o_Segment_B <= r_Hex_Encoding(5);
 o_Segment_C <= r_Hex_Encoding(4);
 ...
 ```
-- The r_Hex_Encoding(7) is left unused.
+- The r_Hex_Encoding(7) is left unused
+- End the architecture.
 
+You will find a simple TB example in the binary_to_7seg folder.
 
-  
+# 8bit RAM 32 adresses
+
+In this example I'll show you how to implement a 8bit RAM with 32 adresses. We can see it as a 32 by 8 matrix. We will use the `ARRAY` contruct. The Memory will have a port that enables the writing inside the RAM and onother one in charge of reading it. By using a 5bit adress port as indexing, you can write and read all the RAM.
+
+## Implementation
+
+- Create a new folder and start a new VHDL file by delaring the entity to have this inputs: 3 single bit (clock, read enable and write enable), 1 5bit (the adresses), 1 8bit (the data to be stored) and 1 8bit output (data to be read)
+- Start the architecture and define a new type as an array of 32 8bit std_logic_vector constituting the matrix. Declare a signal of this type and initialize it to zero:
+```
+TYPE mem IS ARRAY(0 TO 31) OF std_logic_vector(7 DOWNTO 0);
+SIGNAL ram_block : mem:= (others => (others =>'0'));
+```
+- Create two syncronous processes (clk in the sensitivity list) one devoted to write inside the matrix and onother one to read the elements of the matrix.
+```
+...
+if (i_wen ='1') then
+ ram_block(to_integer(unsigned(i_adress)))<=i_data;
+end if;...
+...
+if (i_ren ='1') then
+ o_data<=ram_block(to_integer(unsigned(i_adress)));
+end if;..
+...
+```
+- end the achitecture.
+
+You will find a simple TB example in the RAM8x32 folder.
+
